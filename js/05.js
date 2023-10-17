@@ -14,3 +14,10 @@ var countSheep = function (num) {
     }
     return string
 }
+
+//Complete the solution so that it reverses the string passed into it.
+function solution(str) {
+    let arr = str.split('')
+    let reverseArr = arr.reverse()
+    return reverseArr.join('')
+}

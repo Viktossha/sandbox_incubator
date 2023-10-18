@@ -70,10 +70,14 @@ myStr += someAdjective;
 let lastNameLength = 0;
 const lastName = "Lovelace";
 
-// Only change code below this line
 lastNameLength = lastName.length;
 
-// Setup
 let firstLetterOfLastName = "";
-// Only change code below this line
 firstLetterOfLastName = lastName[0];
+
+// Setup
+let myStr = "Jello World";
+
+// Only change code below this line
+myStr = "Hello World"; // Change this line
+// Only change code above this line

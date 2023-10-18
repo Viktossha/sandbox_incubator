@@ -61,3 +61,7 @@ myStr4 += " This is the second sentence.";
 
 const myName = "Vika";
 const myStr = "My name is " + myName + " and I am well!";
+
+const someAdjective = "hard, difficult, but interesting";
+let myStr = "Learning to code is ";
+myStr += someAdjective;

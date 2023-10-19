@@ -139,3 +139,6 @@ function functionWithArgs(param1, param2) {
 
 functionWithArgs(1, 2);
 functionWithArgs(7,9);
+function timesFive(num) {
+    return num * 5;
+}

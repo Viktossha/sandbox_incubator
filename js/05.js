@@ -117,6 +117,15 @@ function countPositivesSumNegatives(input) {
         }
     }
     return [countPositives, SumNegatives]
+}
 
-
+//Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+function removeExclamationMarks(s) {
+    let arr = Array.from(s);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === '!') {
+            delete arr[i]
+        }
+    }
+    return arr.join('');
 }

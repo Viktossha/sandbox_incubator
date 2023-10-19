@@ -97,3 +97,6 @@ const secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change th
 
 const myArray = [50, 60, 70];
 var myData = myArray[0];
+
+const myArray = [18, 64, 99];
+myArray[0] = 45;

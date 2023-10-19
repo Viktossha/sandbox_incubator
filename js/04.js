@@ -109,3 +109,7 @@ const myArray = [
 ];
 
 const myData = myArray[2][1];
+
+// Setup
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);

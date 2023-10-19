@@ -121,3 +121,8 @@ var removedFromMyArray = myArray.pop();
 // Setup
 const myArray = [["John", 23], ["dog", 3]];
 let removedFromMyArray = myArray.shift();
+
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35]);

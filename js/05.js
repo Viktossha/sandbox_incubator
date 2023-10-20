@@ -188,3 +188,8 @@ function areYouPlayingBanjo(name) {
     let arr = Array.from(name);
     return arr[0] === 'R' || arr[0] === 'r' ? (name + ' plays banjo') : (name + ' does not play banjo');
 }
+
+//In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+function makeNegative(num) {
+    return num > 0 ? -num : num
+}

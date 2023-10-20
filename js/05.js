@@ -140,6 +140,14 @@ const reverseSeq = n => {
     return result;
 };
 
-var isSquare = function(n){
+var isSquare = function (n) {
     return Number.isInteger(Math.sqrt(n));
+}
+
+var summation = function (num) {
+    let res = num;
+    for (let i = 0; i < num; i++) {
+        res += i;
+    }
+    return res;
 }

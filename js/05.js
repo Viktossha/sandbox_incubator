@@ -162,6 +162,15 @@ function litres(time) {
 
 //Implement a function which convert the given boolean value into its string representation.
 // Note: Only valid inputs will be given.
-function booleanToString(b){
+function booleanToString(b) {
     return b === true ? 'true' : 'false';
+}
+
+//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9
+function squareSum(numbers){
+    let newArr = numbers.map((num) => Math.pow(num, 2));
+    return newArr.reduce(function(sum, elem) {
+        return sum + elem;
+    }, 0);
 }

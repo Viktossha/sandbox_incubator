@@ -168,9 +168,13 @@ function booleanToString(b) {
 
 //Complete the square sum function so that it squares each number passed into it and then sums the results together.
 // For example, for [1, 2, 2] it should return 9
-function squareSum(numbers){
+function squareSum(numbers) {
     let newArr = numbers.map((num) => Math.pow(num, 2));
-    return newArr.reduce(function(sum, elem) {
+    return newArr.reduce(function (sum, elem) {
         return sum + elem;
     }, 0);
+}
+
+function numberToString(num) {
+    return String(num);
 }

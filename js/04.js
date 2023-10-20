@@ -5,10 +5,10 @@ const product = 8 * 10;
 const quotient = 66 / 33;
 
 let myVar = 87;
-myVar ++;
+myVar++;
 
 let myVar = 11;
-myVar --;
+myVar--;
 
 const ourDecimal = 5.7;
 let myDecimal = 1.2;
@@ -138,7 +138,8 @@ function functionWithArgs(param1, param2) {
 }
 
 functionWithArgs(1, 2);
-functionWithArgs(7,9);
+functionWithArgs(7, 9);
+
 function timesFive(num) {
     return num * 5;
 }
@@ -171,6 +172,7 @@ function myLocalScope() {
 
     console.log('inside myLocalScope', myVar);
 }
+
 myLocalScope();
 
 // Run and check the console
@@ -201,6 +203,7 @@ function addThree() {
 function addFive() {
     sum = sum + 5;
 }
+
 // Only change code above this line
 
 addThree();
@@ -219,7 +222,8 @@ function nextInLine(arr, item) {
     // Only change code below this line
     arr.push(item);
 
-    return arr.shift();;
+    return arr.shift();
+    ;
     // Only change code above this line
 }
 
@@ -230,3 +234,12 @@ let testArr = [1, 2, 3, 4, 5];
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
+
+function trueOrFalse(wasThatTrue) {
+    // Only change code below this line
+    if (wasThatTrue) {
+        return 'Yes, that was true';
+    }
+    return 'No, that was false';
+
+}

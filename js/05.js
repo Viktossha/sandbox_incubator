@@ -225,3 +225,7 @@ function simpleMultiplication(number) {
 function opposite(number) {
     return number > 0 ? -number : number * (-1);
 }
+//для глупых!!! решение проще, чем выше писала я
+function opposite(number) {
+    return(-number);
+}

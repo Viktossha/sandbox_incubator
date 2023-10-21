@@ -277,3 +277,9 @@ function basicOp(operation, value1, value2) {
 function makeUpperCase(str) {
     return str.toUpperCase();
 }
+
+function stringToArray(string) {
+
+    return string.split(' ');
+
+}

@@ -210,3 +210,8 @@ function repeatStr(n, s) {
     }
     return res;
 }
+
+//есть метод String.prototype.repeat() :)
+function repeatStr (n, s) {
+    return s.repeat(n);
+}

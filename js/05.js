@@ -212,7 +212,7 @@ function repeatStr(n, s) {
 }
 
 //есть метод String.prototype.repeat() :)
-function repeatStr (n, s) {
+function repeatStr(n, s) {
     return s.repeat(n);
 }
 
@@ -225,9 +225,10 @@ function simpleMultiplication(number) {
 function opposite(number) {
     return number > 0 ? -number : number * (-1);
 }
+
 //для глупых!!! решение проще, чем выше писала я
 function opposite(number) {
-    return(-number);
+    return (-number);
 }
 
 //You get an array of numbers, return the sum of all of the positives ones.
@@ -244,6 +245,31 @@ function positiveSum(arr) {
 }
 
 //Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
-function boolToWord( bool ){
+function boolToWord(bool) {
     return bool ? 'Yes' : 'No';
+}
+
+//Your task is to create a function that does four basic mathematical operations.
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case '+':
+            return value1 + value2;
+            break;
+        case '-':
+            return value1 - value2;
+            break;
+        case '*':
+            return value1 * value2;
+            break;
+        case '/':
+            return value1 / value2;
+            break;
+    }
 }

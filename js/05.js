@@ -220,3 +220,8 @@ function repeatStr (n, s) {
 function simpleMultiplication(number) {
     return number % 2 === 0 ? number * 8 : number * 9;
 }
+
+//Very simple, given an integer or a floating-point number, find its opposite.
+function opposite(number) {
+    return number > 0 ? -number : number * (-1);
+}

@@ -273,3 +273,7 @@ function basicOp(operation, value1, value2) {
             break;
     }
 }
+
+function makeUpperCase(str) {
+    return str.toUpperCase();
+}

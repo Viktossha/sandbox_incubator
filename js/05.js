@@ -313,3 +313,12 @@ function removeEveryOther(arr) {
     }
     return res;
 }
+
+//Write a function which calculates the average of the numbers in a given list.
+// Note: Empty arrays should return 0.
+function findAverage(array) {
+    let sum = array.reduce(function (sum, elem) {
+        return sum + elem;
+    }, 0)
+    return array.length === 0 ? 0 : sum / array.length;
+}

@@ -322,3 +322,7 @@ function findAverage(array) {
     }, 0)
     return array.length === 0 ? 0 : sum / array.length;
 }
+
+function enough(cap, on, wait) {
+    return cap/(on+wait) === 1 ? 0 : on - wait;
+}

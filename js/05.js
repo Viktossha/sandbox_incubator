@@ -350,7 +350,7 @@ function sum(numbers) {
     return numbers.reduce(function (sum, elem) {
         return sum + elem;
     }, 0)
-};
+}
 
 
 //This function should test if the factor is a factor of base.
@@ -364,4 +364,12 @@ function sum(numbers) {
 // Note: base is a non-negative number, factor is a positive number.
 function checkForFactor (base, factor) {
     return base % factor === 0;
+}
+
+//The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+// For example:
+// 1.08 --> 30
+// Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+function cockroachSpeed(s) {
+    return Math.round((s * 100000)/3600);
 }

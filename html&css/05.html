@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>freeCodeCamp Survey Form
+    </title>
+    <link rel="stylesheet" href="05.css"/>
+</head>
+<body>
+<h1 id="title">freeCodeCamp Survey Form</h1>
+<p id="description">Thank you for taking the time to help us improve the platform</p>
+<form id="survey-form">
+    <label for="name" id="name-label">Name<input id="name" type="text" required placeholder="Enter your name"></label>
+    <label for="email" id="email-label">Email<input id="email" type="email" required placeholder="Enter your Email"></label>
+    <label for="number" id="number-label">Age<input id="number" min="10" max="99" type="number" placeholder="Age"></label>
+    <select id="dropdown">
+        <option value=""></option>
+        <option value="1"></option>
+    </select>
+    <input type="radio" name="recommend" value="Definitely"/>
+    <input type="radio" name="recommend" value="Maybe"/>
+    <input type="radio" name="recommend" value="Not sure"/>
+    <input type="checkbox" value="Front-end Projects"/>
+    <input type="checkbox" value="Back-end Projects"/>
+    <textarea ></textarea>
+    <input id="submit" type="submit"/>
+</form>
+</body>
+</html>

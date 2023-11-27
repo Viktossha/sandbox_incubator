@@ -385,7 +385,7 @@ function cockroachSpeed(s) {
 // "ACSKLDFJSGSKLDFJSKLDFJ" -> True
 // In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
 String.prototype.isUpperCase = function() {
-    return this == this.toUpperCase();
+    return this === this.toUpperCase();
 }
 
 //You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
@@ -401,3 +401,19 @@ function check(a, x) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return (mpg * fuelLeft) >= distanceToPump
 };
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+//
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+function doubleChar(str) {
+    let arr = str.split('');
+    let newStr = '';
+    for (let i = 0; i < arr.length; i++) {
+        newStr += arr[i] + arr[i]
+    }
+    return newStr;
+}

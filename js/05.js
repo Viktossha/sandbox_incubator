@@ -445,3 +445,7 @@ function rentalCarCost(d) {
     }
     return sum
 }
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}

@@ -480,12 +480,12 @@ function sumStr(a,b) {
     return String(Number(a) + Number(b));
 }
 
-Vika, [10.12.2023 21:01]
-Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
-
-Example: (Input1, Input2 -->Output)
-
-Vika, [10.12.2023 21:01]
+// Vika, [10.12.2023 21:01]
+// Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+//
+// Example: (Input1, Input2 -->Output)
+//
+// Vika, [10.12.2023 21:01]
 function sumStr(a,b) {
     return String(Number(a) + Number(b));
 }

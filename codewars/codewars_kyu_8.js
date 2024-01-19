@@ -362,7 +362,7 @@ function sum(numbers) {
 // You can use the mod operator (%) in most languages to check for a remainder
 // For example 2 is not a factor of 7 because: 7 % 2 = 1
 // Note: base is a non-negative number, factor is a positive number.
-function checkForFactor (base, factor) {
+function checkForFactor(base, factor) {
     return base % factor === 0;
 }
 
@@ -371,7 +371,7 @@ function checkForFactor (base, factor) {
 // 1.08 --> 30
 // Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 function cockroachSpeed(s) {
-    return Math.floor((s * 100000)/3600);
+    return Math.floor((s * 100000) / 3600);
 }
 
 //Task
@@ -384,7 +384,7 @@ function cockroachSpeed(s) {
 // "ACSKLDFJSgSKLDFJSKLDFJ" -> False
 // "ACSKLDFJSGSKLDFJSKLDFJ" -> True
 // In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
-String.prototype.isUpperCase = function() {
+String.prototype.isUpperCase = function () {
     return this === this.toUpperCase();
 }
 
@@ -446,7 +446,7 @@ function rentalCarCost(d) {
     return sum
 }
 
-function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
     return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
 
@@ -456,9 +456,9 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 // If the whole array is consecutive then return null2.
 // The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
 
-function firstNonConsecutive (arr) {
+function firstNonConsecutive(arr) {
     for (let i = 1; i < arr.length; i++) {
-        if (arr[i-1] + 1 !== arr[i])
+        if (arr[i - 1] + 1 !== arr[i])
             return arr[i];
     }
     return null;
@@ -471,12 +471,12 @@ function firstNonConsecutive (arr) {
 // m = 1
 // s = 1
 // result = 61000
-function past(h, m, s){
+function past(h, m, s) {
     return (h * 3600 + m * 60 + s) * 1000
 }
 
 // Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
-function sumStr(a,b) {
+function sumStr(a, b) {
     return String(Number(a) + Number(b));
 }
 
@@ -486,7 +486,7 @@ function sumStr(a,b) {
 // Example: (Input1, Input2 -->Output)
 //
 // Vika, [10.12.2023 21:01]
-function sumStr(a,b) {
+function sumStr(a, b) {
     return String(Number(a) + Number(b));
 }
 
@@ -506,7 +506,7 @@ function sumStr(a,b) {
 // +9 dog years for second year
 // +5 dog years for each year after that
 
-var humanYearsCatYearsDogYears = function(humanYears) {
+var humanYearsCatYearsDogYears = function (humanYears) {
     let catYears = 0
     let dogYears = 0
 
@@ -515,20 +515,20 @@ var humanYearsCatYearsDogYears = function(humanYears) {
     } else if (humanYears === 2) {
         catYears = dogYears = 24;
     } else if (humanYears > 2) {
-        catYears = 4 * (humanYears - 2) + 24 ;
+        catYears = 4 * (humanYears - 2) + 24;
         dogYears = 5 * (humanYears - 2) + 24
     }
 
-    return [humanYears,catYears,dogYears];
+    return [humanYears, catYears, dogYears];
 }
 
-function hoopCount (n) {
+function hoopCount(n) {
     return n > 9 ? "Great, now move on to tricks" : "Keep at it until you get it"
 }
 
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 // Note: input will never be an empty string
-function fakeBin(x){
+function fakeBin(x) {
     let arr = Array.from(x);
     let newArr = []
 
@@ -544,7 +544,7 @@ function fakeBin(x){
 // 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
 // 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
 // 0, in other cases
-function finalGrade (exam, projects) {
+function finalGrade(exam, projects) {
     if (exam > 90 || projects > 10) {
         return 100
     } else if (exam > 75 && projects >= 5) {
@@ -559,7 +559,7 @@ function finalGrade (exam, projects) {
 // You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
 // Write a program that returns the girl's age (0-9) as an integer.
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
-function getAge(inputString){
+function getAge(inputString) {
     return Number(inputString.split(' ')[0])
 }
 
@@ -614,7 +614,7 @@ function bmi(weight, height) {
         return "Normal"
     } else if (bmi <= 30.0) {
         return "Overweight"
-    } else if (bmi > 30 ) {
+    } else if (bmi > 30) {
         return "Obese"
     }
 }
@@ -627,7 +627,7 @@ function bmi(weight, height) {
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
 
 function findNeedle(haystack) {
-    for(let i=0; i < haystack.length; i++) {
+    for (let i = 0; i < haystack.length; i++) {
         if (haystack[i] === 'needle') {
             return `found the needle at position ${i}`
         }
@@ -662,7 +662,7 @@ function findDifference(a, b) {
 // Example:
 // move(3, 6) should equal 15
 
-function move (position, roll) {
+function move(position, roll) {
     return position + roll * 2
 }
 
@@ -673,7 +673,7 @@ function move (position, roll) {
 // n = 1  ==> [1, 2]     # [2^0, 2^1]
 // n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 
-function powersOfTwo(n){
+function powersOfTwo(n) {
     let res = []
     for (let i = 0; i <= n; i++) {
         res[i] = Math.pow(2, i)
@@ -687,4 +687,19 @@ function powersOfTwo(n){
 
 function unusualFive() {
     return 'pizza'.length
+}
+
+//Write a function that checks if a given string (case insensitive) is a palindrome.
+// A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+
+function isPalindrome(x) {
+    let str = x.toLowerCase()
+
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] === str[str.length - 1 - i]) {
+            return true
+        }
+    }
+
+    return false
 }

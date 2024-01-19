@@ -710,3 +710,15 @@ function isPalindrome(x) {
 const isPalindrome2 = (x) => {
     return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
 }
+
+//Задача : учитывая непустой массив целых чисел nums = [1, 2, 1, 2, 4], каждый элемент повторяется дважды, кроме одного. Нужно найти этот единственный элемент используя циклы.
+function onlyOnceNum (nums) {
+
+    let sortArr = nums.sort()
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== nums[i + 1]  && nums[i] !== nums[i - 1]) {
+            return nums[i]
+        }
+    }
+}

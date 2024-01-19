@@ -693,13 +693,14 @@ function unusualFive() {
 // A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
 
 function isPalindrome(x) {
+
     let str = x.toLowerCase()
 
-    for (let i = 0; i < str.length / 2; i++) {
-        if (str[i] === str[str.length - 1 - i]) {
-            return true
+    for (let i = 0; i < str.length/2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            return false
         }
     }
 
-    return false
+    return true
 }

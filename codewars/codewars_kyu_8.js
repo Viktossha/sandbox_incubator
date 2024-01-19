@@ -704,3 +704,9 @@ function isPalindrome(x) {
 
     return true
 }
+
+//Предыдущая задача проще
+
+const isPalindrome2 = (x) => {
+    return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
+}

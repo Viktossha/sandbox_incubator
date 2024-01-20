@@ -739,3 +739,7 @@ function DNAtoRNA(dna) {
     }
     return res.join('')
 }
+
+function DNAtoRNA2(dna) {
+    return dna.replace(/T/g, 'U');
+}

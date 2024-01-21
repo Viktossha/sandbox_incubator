@@ -753,3 +753,15 @@ function DNAtoRNA2(dna) {
 function strCount(str, letter){
     return str.split('').filter(l => l === letter).length
 }
+
+var capitals = function (word) {
+    let res = []
+    for (let i = 0; i < word.length; i++) {
+
+        if (word[i] === word.toUpperCase()[i]) {
+            res[i] = i
+        }
+    }
+
+    return res.filter(el => el != null)
+};

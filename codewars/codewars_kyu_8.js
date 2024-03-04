@@ -765,3 +765,7 @@ var capitals = function (word) {
 
     return res.filter(el => el != null)
 };
+
+function sayHello(name) {
+    return `Hello, ${name}`
+}

@@ -795,3 +795,9 @@ function plural(n) {
     return n !== 1
 }
 
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height
+    }
+}
+

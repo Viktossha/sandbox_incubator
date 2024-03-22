@@ -859,3 +859,15 @@ function pipeFix(numbers){
 const areaOrPerimeter = function(l , w) {
     return l === w ? (l * w) : 2 * (l + w)
 };
+
+//We need a function that can transform a string into a number. What ways of achieving this do you know?
+const stringToNumber = function(str){
+
+    let num = Number(str)
+
+    let num2 = +str //унарный оператор
+
+    let num3 = parseInt(str);
+
+    return num3;
+}

@@ -905,3 +905,15 @@ function howMuchILoveYou(nbPetals) {
             return "not at all"
         }
 }
+
+const phrases = [
+    "not at all", //смещение -1 для первого элемента
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly"
+]
+function howMuchILoveYou(n) {
+    return phrases[n%6] // (n + 6) % 6
+}

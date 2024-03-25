@@ -934,3 +934,14 @@ function shortcut (string) {
 
     return arr.filter(el => !'aeiou'.includes(el)).join('')
 }
+
+//Write a function which takes a number and returns the corresponding ASCII char for that value.
+//
+// Example:
+//
+// 65 --> 'A'
+// 97 --> 'a'
+// 48 --> '0
+function getChar(c){
+    return String.fromCharCode(c)
+}

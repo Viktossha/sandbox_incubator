@@ -1120,5 +1120,5 @@ function points(games) {
 //
 // The array will never be empty.
 function getAverage(marks){
-    return Math.round(marks.reduce(function (a, b) {return a + b}) / marks.length)
+    return Math.floor(marks.reduce(function (a, b) {return a + b}) / marks.length)
 }

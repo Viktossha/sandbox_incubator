@@ -1122,3 +1122,7 @@ function points(games) {
 function getAverage(marks){
     return Math.floor(marks.reduce(function (a, b) {return a + b}) / marks.length)
 }
+
+function fixTheMeerkat(arr) {
+    return arr.reverse()
+}

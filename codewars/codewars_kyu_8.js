@@ -1199,3 +1199,7 @@ function squareOrSquareRoot(array) {
     }
     return newArr;
 }
+
+function squareOrSquareRoot(array) {
+    return array.map(el => Number.isInteger(Math.sqrt(el)) ? Math.sqrt(el) : Math.pow(el, 2))
+}

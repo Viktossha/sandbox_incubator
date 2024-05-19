@@ -1287,3 +1287,8 @@ function twoSort(s) {
     // let firstWorld = s.sort()[0]
     // return firstWorld.split('').map((item, index) => index !== (firstWorld.length- 1) ? `${item}***` : item).join('')
 }
+
+//Find the mean (average) of a list of numbers in an array.
+var findAverage = function (nums) {
+    return nums.reduce((a, b) => a + b)/nums.length
+}

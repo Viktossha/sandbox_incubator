@@ -1321,3 +1321,7 @@ function uefaEuro2016(teams, scores){
 function differenceInAges(ages){
     return [Math.min(...ages), Math.max(...ages), Math.max(...ages) - Math.min(...ages)]
 }
+
+//You are trying to put a hash in ruby or an object in javascript or java into an array, but it always returns error, solve it and keep it as simple as possible!
+let items = []
+items.push({a: "b", c: "d"})

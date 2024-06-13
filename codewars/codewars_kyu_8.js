@@ -1325,3 +1325,24 @@ function differenceInAges(ages){
 //You are trying to put a hash in ruby or an object in javascript or java into an array, but it always returns error, solve it and keep it as simple as possible!
 let items = []
 items.push({a: "b", c: "d"})
+
+//Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+// If they are, change the array value to a string of that vowel.
+function isVow(a){
+    for (let i=0; i < a.length; i++) {
+        switch (a[i]) {
+            case 97: a[i] = 'a'
+                break
+            case 101: a[i] = 'e'
+                break
+            case 105: a[i] = 'i'
+                break
+            case 111: a[i] = 'o'
+                break
+            case 117: a[i] = 'u'
+                break
+            default: a[i]
+        }
+    }
+    return a
+}

@@ -135,3 +135,40 @@ function printerError(s) {
     //     }
     //     return count+"/"+s.length;
 }
+
+//Count the number of divisors of a positive integer n.
+//
+// Random tests go up to n = 500000, but fixed tests go higher.
+//
+// Examples (input --> output)
+// 4 --> 3 // we have 3 divisors - 1, 2 and 4
+// 5 --> 2 // we have 2 divisors - 1 and 5
+// 12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+// 30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+// Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+function getDivisorsCnt(n){
+    let res = []
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            res.push(i)
+        }
+    }
+
+    return res.length
+}
+//код выше не работает для больших n
+
+//Число n имеет делители, которые являются такими числами d, что n % d === 0 (т.е. остаток от деления n на d равен нулю). Мы хотим найти количество таких делителей. Вместо того чтобы проверять все числа от 1 до n, можно использовать более эффективный метод, перебирая числа только до квадратного корня из n. Если d — делитель числа n, то существует ещё один делитель, равный n / d. Например, для числа 28, делителями являются 1 и 28, 2 и 14, 4 и 7. Обратите внимание, что пары делителей связаны: 1 и 28, 2 и 14, 4 и 7.
+function getDivisorsCnt2(n){
+    let res = []
+    for (let i = 1; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            res.push(i)
+            if (i !== n / i) {
+                res.push(n / i)
+            }
+        }
+    }
+
+    return res.length
+}

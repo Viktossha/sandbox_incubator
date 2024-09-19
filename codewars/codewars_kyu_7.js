@@ -220,3 +220,12 @@ function findShort(s){
     //return s.split(' ').map(el => el.length).sort((a, b) => a - b)[0]
     return Math.min(...s.split(' ').map(el => el.length))
 }
+
+//Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+//
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+function removeUrlAnchor(url){
+    return url.split('#')[0]
+}

@@ -338,3 +338,24 @@ function SeriesSum(n) {
 //k — это индекс или номер элемента последовательности, начиная с 0
 //1 — это числитель каждого элемента последовательности. Все элементы имеют одинаковый числитель.
 //1 + 3k — это знаменатель, который увеличивается с шагом 3 для каждого нового члена последовательности.
+
+
+
+//ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+//
+// If the function is passed a valid PIN string, return true, else return false.
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+function validatePIN (pin) {
+    // if (pin === '0000' || pin === '000000') return true
+    // if (pin.length === 4 || pin.length === 6) {
+    //     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    //     let res = numbers.filter(el => pin.includes(el))
+    //     console.log(res)
+    //     return res.length === pin.split('').length
+    // } else return  false
+
+    return (pin.length === 4 || pin.length === 6) ? /^\d+$/.test(pin) : false
+}

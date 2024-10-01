@@ -442,10 +442,11 @@ function squareDigits(num){
 // [] --> []
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 var number=function(array){
-    let res = []
-    for (let i = 0; i < array.length; i++) {
-        res.push(`${i + 1}: ${array[i]}`)
-    }
-
-    return res.length > 0 ? res : []
+    // let res = []
+    // for (let i = 0; i < array.length; i++) {
+    //     res.push(`${i + 1}: ${array[i]}`)
+    // }
+    //
+    // return res.length > 0 ? res : []
+    return array.map((el, index) => `${index + 1}: ${el}`)
 }

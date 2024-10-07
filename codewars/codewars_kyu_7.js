@@ -488,3 +488,14 @@ function sumTwoSmallestNumbers(numbers) {
 function sumDigits(number) {
     return Math.abs(number).toString().split('').map(el => Number(el)).reduce((a, b) => a + b)
 }
+
+//You need to write a function that reverses the words in a given string. Words are always separated by a single space.
+//
+// As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+//
+// Example (Input --> Output)
+// "Hello World" --> "World Hello"
+// "Hi There." --> "There. Hi"
+function reverse(string){
+    return string.split(' ').reverse().join(' ')
+}

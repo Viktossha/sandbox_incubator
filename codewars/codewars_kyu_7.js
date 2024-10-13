@@ -564,9 +564,11 @@ function solve(s){
         }
     }
 
-    if (resLow > resUp || resLow === resUp) {
-        return s.toLowerCase()
-    } else {
-        return s.toUpperCase()
-    }
+    // if (resLow > resUp || resLow === resUp) {
+    //     return s.toLowerCase()
+    // } else {
+    //     return s.toUpperCase()
+    // }
+
+    return resUp > resLow ? s.toUpperCase() : s.toLowerCase()
 }

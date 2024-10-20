@@ -690,3 +690,15 @@ function mxdiflg(a1, a2) {
 
     return Math.max(max_a1 - min_a2, max_a2 - min_a1)
 }
+
+//Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+//
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+//
+// The input will be a lowercase string with no spaces.
+function capitalize(s){
+   let el1 = s.split('').map((el, index) => index === 0 || index % 2 === 0 ? el.toUpperCase() : el.toLowerCase()).join('')
+   let el2 = s.split('').map((el, index) => index === 0 || index % 2 === 0 ? el.toLowerCase() : el.toUpperCase()).join('')
+
+    return [el1, el2]
+};

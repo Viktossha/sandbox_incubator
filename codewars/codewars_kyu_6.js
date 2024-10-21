@@ -9,9 +9,9 @@ function solution(string) {
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === arr[i].toUpperCase()) {
-            arr[i] = '.' + arr[i]
+            arr[i] = ' ' + arr[i]
         }
     }
 
-    return arr.join('').split('.').join(' ')
+    return arr.join('')
 }

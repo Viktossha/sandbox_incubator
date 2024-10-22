@@ -1454,3 +1454,10 @@ function take(arr, n) {
 function problem(x){
     return typeof x === "string" ? 'Error' : x * 50 + 6
 }
+
+//You are given two interior angles (in degrees) of a triangle.
+// Write a function to return the 3rd.
+// Note: only positive integers will be tested.
+function otherAngle(a, b) {
+    return 180 - a - b
+}

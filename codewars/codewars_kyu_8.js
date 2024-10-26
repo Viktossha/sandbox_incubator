@@ -1474,3 +1474,8 @@ function otherAngle(a, b) {
 var Ball = function(ballType) {
     this.ballType = ballType || 'regular'
 };
+
+// If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
+function chromosomeCheck(sperm) {
+    return sperm.split('').includes('Y') ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter."
+}

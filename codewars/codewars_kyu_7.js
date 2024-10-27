@@ -739,3 +739,8 @@ function disemvowel(str) {
     const arr_vowels = ['a', 'e', 'i', 'o', 'u']
     return str.split('').filter(el => !arr_vowels.includes(el.toLowerCase())).join('')
 }
+
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+function minValue(values){
+    return Number(values.filter((el, index) => values.indexOf(el) === index).sort((a, b) => a - b).join(''))
+}

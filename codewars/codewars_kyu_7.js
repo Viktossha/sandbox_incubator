@@ -744,3 +744,12 @@ function disemvowel(str) {
 function minValue(values){
     return Number(values.filter((el, index) => values.indexOf(el) === index).sort((a, b) => a - b).join(''))
 }
+
+//Your task is to write function factorial.
+function factorial(n){
+    let res = 1
+    for (let i = 1; i <= n; i++) {
+        res *= i
+    }
+    return res
+}

@@ -782,3 +782,18 @@ function accum(s) {
 function getEvenNumbers(numbersArray){
     return numbersArray.filter(el => el % 2 === 0)
 }
+
+//Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+//
+// Examples:
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+function solution(str, ending){
+    // let arr = str.split('')
+    // let endingArr = ending.split('')
+    //
+    // let newArr = arr.slice(arr.length - endingArr.length)
+    // return newArr.join('') === endingArr.join('')
+
+    return str.endsWith(ending)
+}

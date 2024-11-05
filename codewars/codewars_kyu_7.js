@@ -850,3 +850,21 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
     let arrAges = [age1, age2, age3, age4, age5, age6, age7, age8]
     return Math.floor(Math.sqrt(arrAges.map(el => el * el).reduce((a, b) => a + b)) / 2)
 }
+
+//Given a sequence of numbers, find the largest pair sum in the sequence.
+//
+// For example
+//
+// [10, 14, 2, 23, 19] -->  42 (= 23 + 19)
+// [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
+// Input sequence contains minimum two elements and every element is an integer.
+function largestPairSum (numbers) {
+    // не работает, если в массиве два одинаковых больших числа
+    // let max1 = Math.max(...numbers)
+    // let max2 = Math.max(...numbers.filter(el => el !== max1))
+    //
+    // return max1 + max2
+
+    let sortArr = numbers.sort((a, b) => b - a)
+    return sortArr[0] + sortArr[1]
+}

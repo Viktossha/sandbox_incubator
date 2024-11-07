@@ -903,3 +903,20 @@ function calculateYears(principal, interest, tax, desired) {
 
     return principal === desired ? 0 : years
 }
+
+//Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+//
+// Notes
+// Array size is at least 1.
+// All numbers will be positive.
+// Input >> Output Examples
+// rowWeights([13, 27, 49])  ==>  return (62, 27)
+function rowWeights(array) {
+    if (array.length !== 1) {
+        let sum1 = array.filter((el, index) => index % 2 === 0).reduce((a, b) => a + b)
+        let sum2 = array.filter((el, index) => index % 2 !== 0).reduce((a, b) => a + b)
+        return [sum1, sum2]
+    } else {
+        return [array[0], 0]
+    }
+}

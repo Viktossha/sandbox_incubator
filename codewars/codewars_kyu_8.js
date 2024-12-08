@@ -1721,3 +1721,11 @@ function xor(a, b) {
     // }
     return a !== b
 }
+
+//Write a function that returns the total surface area and volume of a box as an array: [area, volume]
+function getSize(width, height, depth) {
+    const s = 2 * (width*height + width*depth + height*depth)
+    const v = width*height*depth
+
+    return [s, v]
+}

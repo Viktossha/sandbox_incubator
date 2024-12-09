@@ -1729,3 +1729,15 @@ function getSize(width, height, depth) {
 
     return [s, v]
 }
+
+//Input: Array of elements
+//
+// ["h","o","l","a"]
+//
+// Output: String with comma delimited elements of the array in th same order.
+//
+// "h,o,l,a"
+// Note: the input data can be: boolean array, array of objects, array of string arrays, array of number arrays...
+function printArray(array){
+    return array.join(',')
+}

@@ -1303,3 +1303,15 @@ function isPowerOfTwo(n) {
     }
     return true
 }
+
+//Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+//
+// Example:
+//
+// "riley" --> "Hello Riley!"
+// "JACK"  --> "Hello Jack!"
+var greet = function(name) {
+    const firstLetter = name.split('')[0]
+    const restLetters = name.substr(1)
+    return `Hello ${firstLetter.toUpperCase()}${restLetters.toLowerCase()}!`
+};

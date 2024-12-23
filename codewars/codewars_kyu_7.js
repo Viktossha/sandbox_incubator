@@ -1345,3 +1345,13 @@ function partlist(arr) {
     }
     return res
 }
+
+//Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
+//
+// Return as a number.
+function divCon(x){
+    let arrStrings = x.filter(el => el !== +el)
+    let arrNumbers = x.filter(el => el === +el)
+
+    return arrNumbers.reduce((a, b) => a+b, 0) - arrStrings.reduce((a, b) => +a+(+b), 0)
+}

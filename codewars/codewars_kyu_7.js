@@ -1394,3 +1394,14 @@ function solve(arr) {
     // console.log('b'.charCodeAt(0) - 96); // 2
     // console.log('z'.charCodeAt(0) - 96); // 26
 }
+
+//Find the number with the most digits.
+//
+// If two numbers in the argument array have the same number of digits, return the first one in the array.
+function findLongest(array){
+    return array.reduce((acc, current) => {
+        if (String(acc).length > String(current).length) return acc
+        if (String(acc).length < String(current).length) return current
+        if (String(acc).length === String(current).length) return acc
+    })
+}

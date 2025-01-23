@@ -2067,3 +2067,8 @@ function shortenToDate(longDate) {
 function feast(beast, dish) {
     return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
 }
+
+//Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+function include(arr, item){
+    return arr.includes(item)
+}

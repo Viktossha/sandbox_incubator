@@ -2101,3 +2101,7 @@ function setAlarm(employed, vacation){
 function howManyLightsabersDoYouOwn(name) {
     return name === 'Zach' ? 18 : 0
 }
+
+// add the value "codewars" to the websites array 1,000 times
+let websites = new Array(1000)
+websites.fill("codewars")

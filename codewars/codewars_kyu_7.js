@@ -1535,3 +1535,11 @@ const orderedCount = function (text) {
 function switcheroo(x){
     return x.split('').map(el => el === 'a' ? 'b' : (el === 'b' ? 'a' : el) ).join('')
 }
+
+//Your task is to return a number from a string.
+//
+// Details
+// You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
+function filterString(value) {
+    return +value.split('').filter(el => !isNaN(el)).join('')
+}

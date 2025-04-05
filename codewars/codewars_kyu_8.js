@@ -2211,3 +2211,17 @@ function answer3(){
 function whoIsPaying(name){
     return name.length < 3 ? [name] : [name, name[0]+name[1]]
 }
+
+//Create a class Ghost
+//
+// Ghost objects are instantiated without any arguments.
+//
+// Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
+//
+// ghost = new Ghost();
+// ghost.color //=> "white" or "yellow" or "purple" or "red"
+let Ghost = function() {
+    const colors = ["white", "yellow", "purple", "red"]
+    let randomIndex = Math.floor(Math.random() * colors.length)
+    this.color = colors[randomIndex]
+};

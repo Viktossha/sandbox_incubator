@@ -2274,3 +2274,14 @@ function first(arr, n=1) {
 function squareArea(A){
     return ((2*A)/Math.PI)**2
 }
+
+//The goal is to create a function of two inputs number and power, that "raises" the number up to power (ie multiplies number by itself power times).
+function numberToPower(number, power){
+    //return number ** power
+    //return Math.pow(number, power)
+    let res = 1
+    for (let i = 0; i < power; i++) {
+        res *= number
+    }
+    return res
+}

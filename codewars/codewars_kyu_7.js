@@ -1737,3 +1737,17 @@ function findDigit(num, nth) {
     let digits = Math.abs(num).toString().split('').reverse()
     return nth < 1 ? -1 : (digits[nth-1] ? +digits[nth-1] : 0)
 }
+
+//Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined if any of the values aren't numbers.
+function cubeOdd(arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+        if(typeof arr[i] !== 'number') {
+            return  undefined
+        } else {
+            arr[i] = arr[i]**3
+        }
+    }
+
+    if (arr.length > 0) return  arr.filter(el => el %2 !== 0).reduce((a, b) => a+b)
+}

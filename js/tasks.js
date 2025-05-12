@@ -43,6 +43,7 @@ const countOfSubSegments = (arr) => {
         let b = arr[i+1]
         let c = arr[i+2]
 
+        // Проверяем условие арифметической прогрессии
         if (b-a === c-b) {
             count++
         }

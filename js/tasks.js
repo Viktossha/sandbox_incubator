@@ -36,17 +36,33 @@ function howManyNumbers(startArr) {
 // 1 2 3 3 2
 //
 // Вывод: 3
-const countOfSubSegments = (arr) => {
-    let count = 0
-    for (let i = 0; i < arr.length - 2; i++) {
-        let a = arr[i]
-        let b = arr[i+1]
-        let c = arr[i+2]
 
-        // Проверяем условие арифметической прогрессии
-        if (b-a === c-b) {
-            count++
+function countOfSubSegments(arr) {
+    let count = 0;
+    const n = arr.length;
+
+    // проходимся по всем возможным начальным индексам l
+    for (let l = 0; l < n; l++) {
+        // перебираем правый конец отрезка: r = l, l+1, ..., l+9 (не больше n)
+        for (let r = l; r < Math.min(n, l + 10); r++) {
+            const sub = arr.slice(l, r + 1); // подотрезок от l до r включительно
+
+            // теперь проверим все возможные тройки внутри этого подотрезка
+            for (let i = 0; i < sub.length; i++) {
+                for (let j = i + 1; j < sub.length; j++) {
+                    for (let k = j + 1; k < sub.length; k++) {
+                        if (sub[j] - sub[i] === sub[k] - sub[j]) {
+                            count++; // нашли прогрессию
+                            // больше проверять не нужно — идём к следующему подотрезку
+                            i = sub.length;
+                            j = sub.length;
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
-    return count
+
+    return count;
 }

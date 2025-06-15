@@ -64,3 +64,30 @@ function reverse(str) {
         : el.split('').reverse().join(''))
         .join(' ')
 }
+
+// In the sample test case (submitOrder(12345)), "Your order was placed successfully" should be logged to the console. Hit "Attempt" to see if you pass the kata.
+//
+// Some notes:
+//
+// You can assume that the functions Bob is calling actually exist and take the given parameters in the given order.
+// User "12345" is a valid user for testing
+// Any provided function whose name ends in Async returns a Promise.
+// Any provided function whose name does not end in Async is synchronous, i.e. calculateShipping().
+// As you may have gathered, the purpose of this Kata is to familiarize yourself with using JavaScript Promises for asynchronous programming.
+async function submitOrder(user) {
+
+    // Get the current user's shopping cart
+    let shoppingCart = await OrderAPI.getShoppingCartAsync(user)
+
+    // Also look up the ZIP code from their profile
+    let profile = await CustomerAPI.getProfileAsync(user)
+    let zipCode = profile.zipCode
+
+    // Calculate the shipping fees
+    let shippingRate = calculateShipping(shoppingCart, zipCode);
+
+    // Submit the order
+    let orderSuccessful = await OrderAPI.placeOrderAsync(shoppingCart, shippingRate)
+
+    console.log(`Your order ${orderSuccessful? "was" : "was NOT"} placed successfully`);
+}

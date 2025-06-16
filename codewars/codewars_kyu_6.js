@@ -91,3 +91,35 @@ async function submitOrder(user) {
 
     console.log(`Your order ${orderSuccessful? "was" : "was NOT"} placed successfully`);
 }
+
+//There is a made up API URL (http://great.jokes/christmas) that you can call to a get list of Christmas jokes in JSON format.
+//
+// Your challenge
+// Write an async function which takes an apiUrl and jokeId which returns a promise.
+// The data will need to be filtered to get the specified joke by id.
+// When you got the joke it should be accessible through a simple API of saySetup and sayPunchLine methods.
+// Handle error cases
+//
+// If a joke can't be found throw an error message in this format new Error('No jokes found id: {jokeId}').
+// Getting jokes from a another API URL may return a different data shape, throw this error message new Error('No jokes at url: {url}') for an unexpected shape.
+function sayJoke(apiUrl, jokeId) {
+    if (apiUrl !== 'http://great.jokes/christmas') {
+        throw new Error(`No jokes at url: ${apiUrl}`)
+    }
+    return fetch(apiUrl).then((res) => {
+
+        if (!Array.isArray(res.jokes)) {
+            throw new Error(`No jokes at url: ${apiUrl}`)
+        }
+        let currentJoke = res.jokes.find(el => el.id === jokeId)
+
+        if (!currentJoke) {
+            throw new Error(`No jokes found id: ${jokeId}`)
+        } else {
+            return {
+                saySetup: () => currentJoke.setup,
+                sayPunchLine: () => currentJoke.punchLine,
+            }
+        }
+    })
+}

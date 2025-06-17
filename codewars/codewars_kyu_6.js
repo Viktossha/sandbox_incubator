@@ -106,7 +106,9 @@ function sayJoke(apiUrl, jokeId) {
     if (apiUrl !== 'http://great.jokes/christmas') {
         throw new Error(`No jokes at url: ${apiUrl}`)
     }
-    return fetch(apiUrl).then((res) => {
+    return fetch(apiUrl)
+        .then(res => res.json())
+        .then((res) => {
 
         if (!Array.isArray(res.jokes)) {
             throw new Error(`No jokes at url: ${apiUrl}`)

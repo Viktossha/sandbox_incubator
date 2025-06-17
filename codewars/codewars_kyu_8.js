@@ -2301,3 +2301,7 @@ function Hero (name ) {
     this.damage = 5
     this.experience = 0
 }
+
+function animal(obj){
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}

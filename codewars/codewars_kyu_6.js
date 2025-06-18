@@ -149,13 +149,13 @@ function sayJoke(apiUrl, jokeId) {
 // "www*www****z"   --> "Left side wins!"
 function alphabetWar(fight)
 {
-    const powerRight = {
+    const powerLeft = {
         'w': 4,
         'p': 3,
         'b': 2,
         's': 1
     }
-    const powerLeft = {
+    const powerRight = {
         'm': 4,
         'q': 3,
         'd': 2,
@@ -163,6 +163,16 @@ function alphabetWar(fight)
     }
 
     let arr = fight.split('')
+    // let arrIndices = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === '*') {
+    //         arrIndices.push(i)
+    //         if(i > 0) arrIndices.push(i-1)
+    //         if(i < arr.length -1) arrIndices.push(i+1)
+    //     }
+    // }
+    // let filteredArr = arr.filter((el, i) => !arrIndices.includes(i))
+
     let filteredArr = arr.filter((el, i) => {
         return arr[i] !== '*' && arr[i-1] !== '*' && arr[i+1] !== '*'
     })

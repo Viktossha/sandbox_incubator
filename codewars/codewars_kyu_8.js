@@ -1881,3 +1881,427 @@ function sumMul(n,m){
     }
     return sum
 }
+
+//For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie. The way to return the statement is: "Who ate the last cookie? It was (name)!"
+//
+// Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach! (The reason you return Zach is because the input is a string)
+//
+// Note: Make sure you return the correct message with correct spaces and punctuation.
+function cookie(x){
+    let name = ''
+    switch (typeof x) {
+        case 'number': {
+             name =  "Monica"
+            break
+        }
+        case 'string': {
+             name =  "Zach"
+            break
+        }
+        default: {
+             name =  "the dog"
+        }
+    }
+
+    return `Who ate the last cookie? It was ${name}!`
+}
+
+//I've written five function equal1,equal2,equal3,equal4,equal5, defines six global variables v1 v2 v3 v4 v5 v6, every function has two local variables a,b, please set the appropriate value for the two variables(select from v1--v6), making these function return value equal to 100. the function equal1 is completed, please refer to this example to complete the following functions.
+let v1 = 50,
+    v2 = 100,
+    v3 = 150,
+    v4 = 200,
+    v5 = 2,
+    v6 = 250;
+
+function equal1(){
+    let a = v1,
+        b = v1;
+    return a + b;
+}
+
+//Please refer to the example above to complete the following functions
+function equal2(){
+    let a = v4, //set number value to a
+        b = v2 ; //set number value to b
+    return a - b;
+}
+
+function equal3(){
+    let a = v1 , //set number value to a
+        b = v5 ; //set number value to b
+    return a * b;
+}
+
+function equal4(){
+    let a = v4  , //set number value to a
+        b =  v5; //set number value to b
+    return a / b;
+}
+
+function equal5(){
+    let a = v6, //set number value to a
+        b = v3; //set number value to b
+    return a % b;
+}
+
+//Time to test your basic knowledge in functions! Return the odds from a list:
+//
+// [1, 2, 3, 4, 5]  -->  [1, 3, 5]
+// [2, 4, 6]        -->  []
+function odds(values){
+    return values.filter(el => el % 2 !== 0);
+}
+
+//Write a simple regex to validate a username. Allowed characters are:
+//
+// lowercase letters,
+// numbers,
+// underscore
+// Length should be between 4 and 16 characters (both included).
+function validateUsr(username) {
+    return /^[a-z0-9_]{4,16}$/.test(username)
+}
+
+//You can print your name on a billboard ad. Find out how much it will cost you. Each character has a default price of £30, but that can be different if you are given 2 parameters instead of 1 (always 2 for Java).
+//
+// You can not use multiplier "*" operator.
+//
+// If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 letters * 30 = 600 (Space counts as a character).
+function billboard(name, price = 30){
+    return name.split('').map(el => el = price).reduce((a, b) => (a + b), 0)
+}
+
+//Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+//
+// Valid examples, should return true:
+//
+// isDigit("3")
+// isDigit("  3  ")
+// isDigit("-3.23")
+// should return false:
+//
+// isDigit("3-4")
+// isDigit("  3   5")
+// isDigit("3 5")
+// isDigit("zero")
+function isDigit(s) {
+    s = s.trim()
+    return !isNaN(s) && s !== ''
+}
+
+//Write a function that returns a string in which firstname is swapped with last name.
+// Example(Input --> Output)
+// "john McClane" --> "McClane john"
+function nameShuffler(str){
+    return str.split(' ').reverse().join(' ')
+}
+
+//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+//
+// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+//
+// Examples:
+//
+// * With `name` = "john"  => return "Hello, John!"
+// * With `name` = "aliCE" => return "Hello, Alice!"
+// * With `name` not given
+//   or `name` = ""        => return "Hello, World!"
+function hello(name) {
+    return name ? `Hello, ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!` : `Hello, World!`;
+}
+
+// Your task is to complete this Class, the Person class has been created. You must fill in the Constructor method to accept a name as string and an age as number, complete the get Info property and getInfo method/Info getter which should return johns age is 34
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    get info() {
+        return `${this.name}s age is ${this.age}`;
+    }
+}
+
+//Your task is to find the nearest square number of a positive integer n. In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+//
+// For example, if n = 111, then the nearest square number equals 121, since 111 is closer to 121, the square of 11, than 100, the square of 10.
+//
+// If n is already a perfect square (e.g. n = 144, n = 81, etc.), you need to just return n
+function nearestSq(n){
+    if (Number.isInteger(Math.sqrt(n))) return n
+
+    let a = n
+    while (Number.isInteger(Math.sqrt(a)) === false) {
+        a++
+    }
+
+    let b = n
+    while (Number.isInteger(Math.sqrt(b)) === false) {
+        b--
+    }
+
+    return a - n > n - b ? b : a
+}
+
+//You're re-designing a blog, and the blog's posts have the Weekday Month Day, time format for showing the date and time when a post was made, e.g., Friday May 2, 7pm.
+//
+// You're running out of screen real estate, and on some pages you want to display a shorter format, Weekday Month Day that omits the time.
+//
+// Write a function that takes the website date/time in its original string format and returns the shortened format.
+//
+// Input
+// Input will always be a string, e.g., "Friday May 2, 7pm".
+//
+// Output
+// Output will be the shortened string, e.g., "Friday May 2".
+function shortenToDate(longDate) {
+    return longDate.split(',')[0]
+}
+
+//All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+//
+// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+//
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+function feast(beast, dish) {
+    return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+}
+
+//Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+function include(arr, item){
+    return arr.includes(item)
+}
+
+//Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending on language) which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+//
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+//
+// employed | vacation
+// true     | true     => false
+// true     | false    => true
+// false    | true     => false
+// false    | false    => false
+function setAlarm(employed, vacation){
+    return employed && !vacation
+}
+
+//Inspired by the development team at Vooza, write the function that
+//
+// accepts the name of a programmer, and
+// returns the number of lightsabers owned by that person.
+// The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.
+//
+// Note: your function should have a default parameter.
+//
+// For example(Input --> Output):
+//
+// "anyone else" --> 0
+// "Zach" --> 18
+function howManyLightsabersDoYouOwn(name) {
+    return name === 'Zach' ? 18 : 0
+}
+
+// add the value "codewars" to the websites array 1,000 times
+let websites = new Array(1000)
+websites.fill("codewars")
+
+//if oscar was (integer) 88, you have to return "Leo finally won the oscar! Leo is happy".
+// if oscar was 86, you have to return "Not even for Wolf of wallstreet?!"
+// if it was not 88 or 86 (and below 88) you should return "When will you give Leo an Oscar?"
+// if it was over 88 you should return "Leo got one already!"
+function leo(oscar){
+    // Обычно switch сравнивает переданное значение с каждым case, но если нужно проверять условия, а не конкретные значения, то передаваемое значение должно быть true
+    switch (true) {
+        case oscar === 88:
+            return "Leo finally won the oscar! Leo is happy";
+        case oscar === 86:
+            return "Not even for Wolf of wallstreet?!";
+        case oscar < 88:
+            return "When will you give Leo an Oscar?";
+        default:
+            return "Leo got one already!";
+    }
+}
+
+//Create a method all which takes two params:
+//
+// a sequence
+// a function (function pointer in C)
+// and returns true if the function in the params returns true for every element in the sequence. Otherwise, it should return false. If the sequence is empty, it should return true, since technically nothing failed the test.
+//
+// Example
+// all((1, 2, 3, 4, 5), greater_than_9) -> false
+// all((1, 2, 3, 4, 5), less_than_9)    -> True
+function all( arr, fun ){
+    // if (arr.length === 0) return true
+    //
+    // const newArr = arr.map(el => fun(el) ? '1' : '0')
+    //
+    // return !newArr.includes('0')
+
+    return arr.every(fun)
+}
+
+//There was a test in your class and you passed it. Congratulations!
+//
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+//
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+//
+// Return true if you're better, else false!
+//
+// Note:
+// Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
+function betterThanAverage(classPoints, yourPoints) {
+    return (classPoints.reduce((a, b) => a + b) + yourPoints) / (classPoints.length + 1) > yourPoints
+}
+
+//It is easy to join two strings together like this string1 + string2.
+//
+// Another way to get the desired result would be with string1.concat(string2)
+//
+// ES6 has introduced another way of joining strings. Your task is to find out what this is and write a function that will add two strings together, there must be a space between the two strings.
+//
+// + , .concat() & .join() will not be allowed in this exercise. I have also removed some other methods that can be used to cheat!
+//
+// If one of the arguments is a number your code must coerce it into being a string.
+function joinStrings(string1, string2){
+    return `${string1} ${string2}`
+}
+
+//misson 1: I've create three function, and defined some global variables, please select some variables that can make up the name of the function, and return them(Please note the uppercase and lowercase letters are different).
+//
+// When you have finished the work, click "Run Tests" to see if your code is working properly.
+//
+// misson 2: After misson 1 finished. you should click "Attempt" to see my three questions, and write the answer in function answer1, answer2,answer3
+//
+// If everything is right, click "Submit" again to submit your code pass this kata.
+var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
+function Dad(){
+    //select some variable to combine "Dad"
+    return d1+a2+d2;
+}
+function Bee(){
+    //select some variable to combine "Bee"
+    return b1+e2+e2;
+}
+function banana(){
+    //select some variable to combine "banana"
+    return b2+a2+n2+a2+n2+a2;
+}
+
+//answer some questions if you finished works above
+function answer1(){
+    //the answer should be "yes" or "no"
+    return "no";
+}
+function answer2(){
+    //the answer should be "yes" or "no"
+    return "no";
+}
+function answer3(){
+    //the answer should be "yes" or "no"
+    return "yes";
+}
+
+//Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+//
+// Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is.
+function whoIsPaying(name){
+    return name.length < 3 ? [name] : [name, name[0]+name[1]]
+}
+
+//Create a class Ghost
+//
+// Ghost objects are instantiated without any arguments.
+//
+// Ghost objects are given a random color attribute of "white" or "yellow" or "purple" or "red" when instantiated
+//
+// ghost = new Ghost();
+// ghost.color //=> "white" or "yellow" or "purple" or "red"
+let Ghost = function() {
+    const colors = ["white", "yellow", "purple", "red"]
+    let randomIndex = Math.floor(Math.random() * colors.length)
+    this.color = colors[randomIndex]
+};
+
+//reate a function that finds the integral of the expression passed.
+//
+// In order to find the integral all you need to do is add one to the exponent (the second argument), and divide the coefficient (the first argument) by that new number.
+//
+// For example for 3x^2, the integral would be 1x^3: we added 1 to the exponent, and divided the coefficient by that new number).
+//
+// Notes:
+//
+// The output should be a string.
+// The coefficient and exponent is always a positive integer.
+// Examples
+//  3, 2  -->  "1x^3"
+// 12, 5  -->  "2x^6"
+// 20, 1  -->  "10x^2"
+// 40, 3  -->  "10x^4"
+// 90, 2  -->  "30x^3"
+function integrate(coefficient, exponent) {
+    return `${Math.floor(coefficient/(exponent+1))}x^${exponent+1}`
+}
+
+//Add the value "codewars" to the websites array.
+// After your code executes the websites array should == ["codewars"]
+//
+// The websites array has already been defined for you using the following code:
+//
+var websites = [];
+websites.push('codewars')
+
+//Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence.
+//
+// If n == 0 return an empty sequence []
+//
+// Examples
+// var arr = ['a', 'b', 'c', 'd', 'e'];
+// first(arr) //=> ['a'];
+// first(arr, 2) //=> ['a', 'b']
+// first(arr, 3) //=> ['a', 'b', 'c'];
+// first(arr, 0) //=> [];
+function first(arr, n=1) {
+    //return n === 0 ? [] : (n === 1 ? [arr[0]] : arr.slice(0, n))
+    return arr.slice(0, n)
+}
+
+//Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
+// Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
+function squareArea(A){
+    return ((2*A)/Math.PI)**2
+}
+
+//The goal is to create a function of two inputs number and power, that "raises" the number up to power (ie multiplies number by itself power times).
+function numberToPower(number, power){
+    //return number ** power
+    //return Math.pow(number, power)
+    let res = 1
+    for (let i = 0; i < power; i++) {
+        res *= number
+    }
+    return res
+}
+
+//In this first kata in the series, you need to define a Hero prototype to be used in a terminal game. The hero should have the following attributes:
+//
+// attribute	value
+// name	user argument or 'Hero'
+// position	'00'
+// health	100
+// damage	5
+// experience	0
+function Hero (name ) {
+    this.name = name || 'Hero'
+    this.position = '00'
+    this.health = 100
+    this.damage = 5
+    this.experience = 0
+}
+
+function animal(obj){
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}

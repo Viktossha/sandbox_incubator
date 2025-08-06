@@ -1362,3 +1362,14 @@ function fizzbuzz(n) {
 
     return res
 }
+
+//Given a number, write a function to output its reverse digits. (e.g. given 123 the answer is 321)
+// Numbers should preserve their sign; i.e. a negative number should still be negative when reversed.
+function reverseNumber(n) {
+    let res = +Math.abs(n).toString().split('').reverse().join('')
+    if (n < 0) {
+        return -Math.abs(res)
+    } else {
+        return Math.abs(res)
+    }
+}

@@ -2405,3 +2405,12 @@ function duckDuckGoose(players, goose) {
     const index = (goose-1) % players.length
     return players[index].name
 }
+
+// Point objects have attributes x and y.
+// Write a function calculating distance between Point a and Point b.
+// Input coordinates fit in range
+// −50⩽x,y⩽50. Tests compare expected result and actual answer with tolerance of 1e-6.
+function distanceBetweenPoints(a, b) {
+    //return Math.sqrt((b.y - a.y)**2 + (b.x - a.x)**2)
+    return Math.hypot(a.x - b.x, a.y - b.y)
+}

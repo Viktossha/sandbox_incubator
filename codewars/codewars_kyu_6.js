@@ -661,3 +661,19 @@ function high(x){
 
     return wordRes
 }
+
+//You will be given a number and you will need to return it as a string in Expanded Form. For example:
+//    12 --> "10 + 2"
+//    45 --> "40 + 5"
+// 70304 --> "70000 + 300 + 4"
+// NOTE: All numbers will be whole numbers greater than 0.
+function expandedForm(num) {
+    let str = num.toString()
+    let res = []
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === '0') continue
+        let newStr = str[i] + str.slice(i+1).replace(/./g, '0')
+        res.push(newStr)
+    }
+    return res.join(' + ')
+}

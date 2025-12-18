@@ -677,3 +677,27 @@ function expandedForm(num) {
     }
     return res.join(' + ')
 }
+
+//As you know, a promise is in one of these states: pending, fulfilled, rejected.
+//
+// Implement the async function getState that determines a state of a promise.
+//
+// const p = Promise.resolve();
+// const state = await getState(p); // === "fulfilled"
+//
+// const p = Promise.reject();
+// const state = await getState(p); // === "rejected"
+//
+// const p = new Promise(() => {});
+// const state = await getState(p); // === "pending"
+function getState(promise) {
+    // return Promise.race([promise.then(() => {
+    //     return 'fulfilled'
+    // }).catch(() => {
+    //     return 'rejected'
+    // }), new Promise(resolve => setTimeout(() => resolve('pending'), 0))])
+    return new Promise(resolve => {
+        promise.then(() => resolve("fulfilled"), () => resolve("rejected"))
+        queueMicrotask(() => resolve("pending"))
+    })
+}

@@ -7,3 +7,15 @@ SELECT flower1, flower2, flower1 % 2 <> flower2 % 2 AS res FROM love
 
 -- # write your SQL statement here: you are given a table 'nospace' with column 'x', return a table with column 'x' and your result in a column named 'res'.
 SELECT x, REPLACE(x, ' ', '') AS res FROM nospace
+
+/*
+For this challenge you need to create a simple MIN / MAX statement that will return the Minimum and Maximum ages out of all the people.
+people table schema
+id
+name
+age
+select table schema
+age_min (minimum of ages)
+age_max (maximum of ages)
+*/
+SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people
